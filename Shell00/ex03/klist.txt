@@ -1,0 +1,6 @@
+Credentials cache: API:392DE9DE-C803-4BA9-B0E0-46726462517C
+        Principal: pcoenegr@S19.BE
+
+  Issued                Expires               Principal
+Mar  1 13:01:49 2021  Mar  1 23:01:49 2021  krbtgt/S19.BE@S19.BE
+Mar  1 13:01:51 2021  Mar  1 23:01:49 2021  HTTP/san-ssd.s19.be@S19.BE

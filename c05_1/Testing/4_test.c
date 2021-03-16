@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -33,9 +33,19 @@ int	ft_fibonacci(int index)
 
 int	main(void)
 {
-	int r;
+	int i;
 
-	r = ft_fibonacci(13);
-	ft_putnbr(r);
+	i = ft_fibonacci(10);
+	ft_putnbr(i);
 	return (0);
 }
+
+/*
+ -----------------------------------------
+ 0    1    1    2    3    5
+ 0    1    2    3    4    5
+ -----------------------------------------
+ 8    13    21    34    55    89
+ 6    7     8     9     10    11
+ ------------------------------------------
+ */

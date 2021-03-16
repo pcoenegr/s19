@@ -1,12 +1,26 @@
-int     ft_sqrt(int nb)
-{
-        int     i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/16 13:48:19 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/16 13:54:24 by pcoenegr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-        i = 0;
-        while (i * i < nb)
-                i++;
-        if (i * i == nb)
-                return (i);
-        else
-                return (0);
+#include <unistd.h>
+
+int		ft_sqrt(int nb)
+{
+	int	i;
+
+	i = 0;
+	while (i * i < nb)
+		i++;
+	if (i * i == nb)
+		return (i);
+	else
+		return (0);
 }
