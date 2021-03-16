@@ -1,25 +1,46 @@
-int	ft_atoi(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/16 12:20:20 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/16 12:23:42 by pcoenegr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+int		ft_space(char p)
 {
-	int x;
-	int tot;
-	int neg;
+	if (p == ' ' || p == '	' || p == '\n' || p == '\r' || p == '\f'
+			|| p == '\t' || p == '\v')
+		return (1);
+	return (0);
+}
+
+int		ft_atoi(char *str)
+{
+	int		x;
+	int		tot;
+	int		neg;
 
 	x = 0;
-	neg = 0 ;
-	tot = 0 ;
-	while ((str[x] == '	') || (str[x] == ' ') || (str[x] == '\n') || (str[x] == '\r') || (str[x] == '\f')
-			|| (str[x] == '\t') || (str[x] == '\v'))
+	neg = 0;
+	tot = 0;
+	while (ft_space(str[x]))
 		x++;
 	if (str[x] == '-')
 	{
 		neg = 1;
 	}
-	while ((str[x] == '-' ) || (str[x] == '+'))
+	while ((str[x] == '-') || (str[x] == '+'))
 		x++;
 	while (str[x] >= '0' && str[x] <= '9')
-	{	
-		tot *= 10 ;
-		tot += ((int) str[x] - '0');
+	{
+		tot *= 10;
+		tot += (str[x] - '0');
 		x++;
 	}
 	if (neg == 1)

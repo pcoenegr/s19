@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 10:32:50 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/16 10:33:33 by pcoenegr         ###   ########.fr       */
+/*   Created: 2021/03/16 09:44:25 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/16 09:45:39 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <unistd.h>
 
-char	*ft_strstr(char *str, char *to_find)
+void		ft_rev_int_tab(int *tab, int size)
 {
-	char	*a;
-	char	*b;
+	int		i;
+	char	f;
 
-	b = to_find;
-	if (*b == '\0')
-		return (str);
-	while (*str)
+	i = -1;
+	while (++i < --size)
 	{
-		if (*str == *b)
-		{
-			a = str;
-			while (*a == *b || *b == '\0')
-			{
-				if (*b == '\0')
-					return (str);
-				a++;
-				b++;
-			}
-			b = to_find;
-		}
-		str++;
+		f = tab[i];
+		tab[i] = tab[size];
+		tab[size] = f;
 	}
-	return (0);
 }

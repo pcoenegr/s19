@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncopy.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/16 09:49:31 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/16 09:56:20 by pcoenegr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strncpy(char *dest, char *src, unsigned int n)
+#include <unistd.h>
+
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	int i;
 

@@ -1,16 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/16 10:38:26 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/16 10:40:31 by pcoenegr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 
-char	(char c)
+void	ft_putchar(char c)
 {
-	write (1 , &c, 1);
+	write(1, &c, 1);
 }
 
-void 	ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
 	while (*str != '\0')
 	{
 		ft_putchar(*str);
-		str ++;
+		str++;
 	}
 }
