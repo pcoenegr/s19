@@ -1,0 +1,86 @@
+
+#######################################################################
+#
+# The ar program creates, modifies, and extracts from archives.
+# An archive is a single file containing a collection of other files in
+# a structure that allows you to restore the original person
+# files (called archive members).
+#    
+# Usage: ar [emulation options] [-] {dmpqrstx} [abcDfilMNoPsSTuvV]
+# [--plugin <name>] [member_name] [counter] archive_file file ...
+# ar -M [<mri script]
+# commands:
+# d - delete files from archive
+# m [ab] - move files to archive
+# p - output files found in the archive
+# q [f] - quickly add files to the archive
+# r [ab] [f] [u] - replace existing or insert new files into the archive
+# s - act like ranlib
+# t - display the contents of the archive
+# x [o] - extract files from archive
+# special modifiers for commands:
+# [a] - location of files after [member_name]
+# [b] - location of files before [member_name] (same as [i])
+# [D] - use zero for timestamps and uids / gids (default)
+# [U] - use actual timestamps and uids / gids
+# [N] - use [account] as a variant of the name
+# [f] - truncate the names of the inserted files
+# [P] - use full pathnames when matching
+# [o] - keep original dates
+# [u] - replace only files newer than the current contents of the archive
+# common modifiers:
+# [c] - do not warn if a library is to be created
+# [s] - create archive index (cf. ranlib)
+# [S] - do not create symbol table
+# [T] - create a half-empty archive
+# [v] - verbose mode
+# [V] - display the version number
+# @ <file> - read parameters from <file>
+# --target = BFDNAME - set the target object format to BFDNAME
+# optional:
+# --plugin <p> - load the specified module
+# emulation parameters: 
+# No emulation options
+# ar: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux
+# pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big
+# pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+#
+#
+# ################################################ #################################### #
+
+
+
+
+
+# ################################################ #################################### #
+#
+# RANLIB
+#
+#
+# The ranlib program generates an index of the contents of the archive to increase the speed of access to it and
+# saves it to the archive.
+# The index lists all symbols defined by the archive member, 
+# which is the relocatable object file.
+# You can use nm -s or nm --print-armap to display 
+# of this index.
+# An archive with such an index speeds up the connection to the library and allows
+# subroutines in the library call each other independently of them 
+# placement in the archive.
+# The ranlib program is another form of ar; running ranlib completely
+# is equivalent to doing ar -s.
+#    
+# Usage: ranlib [options] archive
+# Options:
+# @ <file> read parameters from <file>
+# --plugin <name> load the specified module
+# -D Use zero for symbol map timestamp (default)
+# -U Use an actual symbol map timestamp
+# -t update archive symbol map timestamps
+# -h --help show this help message
+# -V --version show version information
+# ranlib: Supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux
+# pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big
+# pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+#
+#
+# ################################################ #################################### #
