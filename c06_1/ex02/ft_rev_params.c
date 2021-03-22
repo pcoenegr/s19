@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/22 09:29:56 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/22 09:33:51 by pcoenegr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -17,13 +29,13 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	main(int argc, char *argv[])
+int		main(int argc, char *argv[])
 {
 	int x;
 
-	x = argc -1;
+	x = argc - 1;
 	if (argc > 1)
-	{	
+	{
 		while (x > 0)
 		{
 			ft_putstr(argv[x]);
@@ -31,5 +43,4 @@ int	main(int argc, char *argv[])
 			x--;
 		}
 	}
-
 }

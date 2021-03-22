@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/22 09:30:05 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/22 09:35:28 by pcoenegr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -19,8 +31,8 @@ void	ft_putstr(char *str)
 
 void	ft_sortby_ascii(int nb, char **value)
 {
-	int	z;
-	int	y;
+	int		z;
+	int		y;
 	char	*t;
 
 	z = 0;
@@ -32,7 +44,7 @@ void	ft_sortby_ascii(int nb, char **value)
 		if (value[z][y] > value[z + 1][y])
 		{
 			t = value[z];
-			value[z] = value [z + 1];
+			value[z] = value[z + 1];
 			value[z + 1] = t;
 			z = 0;
 		}
@@ -40,7 +52,7 @@ void	ft_sortby_ascii(int nb, char **value)
 	}
 }
 
-int	main(int argc, char *argv[])
+int		main(int argc, char *argv[])
 {
 	int x;
 

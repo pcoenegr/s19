@@ -51,7 +51,7 @@ int	ft_is_prime(int nb)
 int 	main(void)
 {
 
-	if (ft_is_prime(1))
+	if (ft_is_prime(13))
 		ft_putstr("issamario\n");
 	else
 		ft_putstr("issaluigi\n");

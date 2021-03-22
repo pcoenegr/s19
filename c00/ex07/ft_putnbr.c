@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/22 09:42:58 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/22 09:44:12 by pcoenegr         ###   ########.fr       */
+/*   Created: 2021/03/22 08:57:31 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/22 09:00:46 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
 
-int		ft_strlen(char *str)
+void	ft_putchar(char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	write(1, &c, 1);
 }
 
-char	*ft_strdup(char *src)
+void	ft_putnbr(int nb)
 {
-	int		i;
-	char	*str;
-	int		l;
-
-	i = 0;
-	l = ft_strlen(src);
-	str = (char*)malloc(sizeof(*str) * (l++));
-	while (i < l)
+	if (nb < 0)
 	{
-		str[i] = src[i];
-		i++;
+		nb = -nb;
+		ft_putchar('-');
 	}
-	str[i] = '\0';
-	return (str);
+	if (nb < 10)
+		ft_putchar(nb + '0');
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
 }

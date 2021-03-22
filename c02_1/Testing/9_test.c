@@ -10,11 +10,9 @@ void	ft_putstr(char *str)
 	int     i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
+	while (*(str + i))
 		i++;
-	}
+	write(1, str, i);
 }
 
 char	*ft_strlowcase(char *str)
@@ -52,12 +50,10 @@ char	*ft_strcapitalize(char *str)
 
 int	main(void)
 {
-
-
-	char	t[] = {"Before:	salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un\n"};
-	char    r[] = {"After : salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un\n"};
-
-	ft_putstr(t);
-	ft_putstr(ft_strcapitalize(r));
+	char    r[] = {"salut, cOmmEnt tu vas ? 42mots quarante-deux; cinquante+et+un\n"};
+    char    t[] = {"salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un\n"};
+	
+    ft_putstr(t);
+    ft_putstr(ft_strcapitalize(r));
 	return (0);
 }
