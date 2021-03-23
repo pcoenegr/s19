@@ -6,7 +6,7 @@
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 10:38:26 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/16 10:40:31 by pcoenegr         ###   ########.fr       */
+/*   Updated: 2021/03/23 12:56:32 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@ void	ft_putchar(char c)
 
 void	ft_putstr(char *str)
 {
-	while (*str != '\0')
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(*str);
-		str++;
+		ft_putchar(str[i]);
+		i++;
 	}
 }

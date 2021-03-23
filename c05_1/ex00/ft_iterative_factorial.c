@@ -6,7 +6,7 @@
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 12:38:33 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/16 12:39:41 by pcoenegr         ###   ########.fr       */
+/*   Updated: 2021/03/23 14:15:03 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@ int		ft_iterative_factorial(int nb)
 	int i;
 
 	i = 1;
-	if (nb < 0)
-	{
+	if (nb <= 0)
 		return (0);
-	}
 	while (nb > 0)
 	{
 		i *= nb;

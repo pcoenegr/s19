@@ -21,27 +21,27 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb % 10);
 	}
 }
-int	ft_iterative_factorial (int nb)
-{
-	int i;
 
-	i = 1;
-	if (nb < 0)
-	{
-		return (0);
-	}
-	while (nb > 0 )
-	{
-		i *= nb;
-		nb--;
-	}
-	return (i);
+int        ft_iterative_factorial(int nb)
+{
+    int i;
+    
+    i = 1;
+    if (nb <= 0)
+        return (0);
+    while (nb > 0)
+    {
+        i *= nb;
+        nb--;
+    }
+    return (i);
 }
+
 int	main(void) 
 {
 	int r;
 
-	r = ft_iterative_factorial(0);
+	r = ft_iterative_factorial(-4);
 
 	ft_putnbr(r);
 

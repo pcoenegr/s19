@@ -1,16 +1,21 @@
 #include <string.h>
 #include <stdio.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
+#include <unistd.h>
 
-	i = 0;
-	while (++i < n && src[i] != '\0')
-		dest[i] = src[i];
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+char    *ft_strncpy(char *dest, char *src, unsigned int n)
+{
+   unsigned  int i;
+    
+    i = 0;
+    while (i < n && src[i] != '\0')
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    while (i < n)
+        dest[i++] = '\0';
+    return (dest);
 }
 
 int 	main(void)

@@ -23,9 +23,9 @@ char	*ft_strlcat(char *dest, char *src, int size)
 
 		i = 0;
 		l = 0;
-		while (dest[l])
+		while (dest[l] != '\0')
 				l++;
-		while (src[i] && (l < (size - 1)))
+		while (src[i] != '\0' && (l < (size - 1)))
 		{
 				dest[l] = src[i];
 				l++;

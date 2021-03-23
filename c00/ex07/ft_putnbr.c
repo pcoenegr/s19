@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/22 08:57:31 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/22 09:00:46 by pcoenegr         ###   ########.fr       */
+/*   Created: 2021/03/16 10:41:37 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/23 08:56:48 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ void	ft_putnbr(int nb)
 	}
 	if (nb < 10)
 		ft_putchar(nb + '0');
-	else
+	if (nb == '0')
+		ft_putchar('0');
+	if (nb >= 10)
 	{
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);

@@ -6,11 +6,12 @@
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 10:25:34 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/16 10:25:56 by pcoenegr         ###   ########.fr       */
+/*   Updated: 2021/03/23 08:46:16 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <string.h>
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {

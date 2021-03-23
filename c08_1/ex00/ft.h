@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 10:32:50 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/16 10:33:33 by pcoenegr         ###   ########.fr       */
+/*   Created: 2021/03/22 14:24:54 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/22 14:26:52 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#ifndef FT_H
+# define FT_H
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	char	*a;
-	char	*b;
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 
-	b = to_find;
-	if (*b == '\0')
-		return (str);
-	while (*str)
-	{
-		if (*str == *b)
-		{
-			a = str;
-			while (*a == *b || *b == '\0')
-			{
-				if (*b == '\0')
-					return (str);
-				a++;
-				b++;
-			}
-			b = to_find;
-		}
-		str++;
-	}
-	return (0);
-}
+#endif

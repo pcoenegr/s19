@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 10:32:50 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/16 10:33:33 by pcoenegr         ###   ########.fr       */
+/*   Created: 2021/03/22 14:29:16 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/22 15:58:18 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	char	*a;
-	char	*b;
+# include <unistd.h>
 
-	b = to_find;
-	if (*b == '\0')
-		return (str);
-	while (*str)
-	{
-		if (*str == *b)
-		{
-			a = str;
-			while (*a == *b || *b == '\0')
-			{
-				if (*b == '\0')
-					return (str);
-				a++;
-				b++;
-			}
-			b = to_find;
-		}
-		str++;
-	}
-	return (0);
-}
+# define TRUE		1
+# define FALSE		0
+# define SUCCESS	0
+# define EVEN		(nbr % 2)
+# define EVEN_MSG	"I have an even number of arguments."
+# define ODD_MSG	"I have an odd number of arguments."
+
+typedef int		t_bool;
+void			ft_putstr(char *str);
+t_bool			ft_is_even(int nbr);
+
+#endif

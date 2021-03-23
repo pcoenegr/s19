@@ -6,7 +6,7 @@
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 10:35:58 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/16 10:36:36 by pcoenegr         ###   ########.fr       */
+/*   Updated: 2021/03/23 12:43:59 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ char	*ft_strlcat(char *dest, char *src, int size)
 
 	i = 0;
 	l = 0;
-	while (dest[l])
+	while (dest[l] != '\0')
 		l++;
-	while (src[i] && (l < (size - 1)))
+	while (src[i] != '\0' && (l < (size - 1)))
 	{
 		dest[l] = src[i];
 		l++;
 		i++;
 	}
 	dest[l] = '\0';
-	return (l);
+	return (dest);
 }
