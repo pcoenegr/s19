@@ -6,16 +6,16 @@
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 10:33:43 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/16 10:34:40 by pcoenegr         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:09:02 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncat(char *dest, char *src, int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	l;
+	unsigned int	i;
+	unsigned int	l;
 
 	i = 0;
 	l = 0;

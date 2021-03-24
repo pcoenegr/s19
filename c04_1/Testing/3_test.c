@@ -8,6 +8,9 @@ void	ft_putchar(char c)
 
 void 	ft_putnbr(int nb)
 {
+	unsigned int n;
+
+	n = nb;
 	if (nb < 0 )
 	{
 		nb = -nb;
@@ -23,22 +26,22 @@ void 	ft_putnbr(int nb)
 }
 
 int		ft_space(char p)
-{	
-	if (p == ' ' || p == '	' || p  == '\n' || p  == '\r' || p  == '\f'
-			|| p  == '\t' || p  == '\v')
+{
+	if (p == ' ' || p == '\n' || p == '\r' || p == '\f'
+			|| p == '\t' || p == '\v')
 		return (1);
 	return (0);
 }
 
-int	ft_atoi(char *str)
+int		ft_atoi(char *str)
 {
-	int x;
-	int tot;
-	int neg;
+	int		x;
+	int		tot;
+    int		neg;
 
 	x = 0;
-	neg = 0 ;
-	tot = 0 ;
+	neg = 0;
+	tot = 0;
 	while (ft_space(str[x]))
 		x++;
 	if (str[x] == '-')
@@ -48,9 +51,9 @@ int	ft_atoi(char *str)
 	while ((str[x] == '-') || (str[x] == '+'))
 		x++;
 	while (str[x] >= '0' && str[x] <= '9')
-	{	
+	{
 		tot *= 10;
-		tot += (str[x] - '0');
+		tot += ((int)str[x] - '0');
 		x++;
 	}
 	if (neg == 1)
@@ -61,7 +64,13 @@ int	ft_atoi(char *str)
 
 int	main(void)
 {
-	char a[] = " \f\r\t ++-5555534AZZZhrsdsaadth";
-	printf("%d\n",ft_atoi(a));
+	int	i;
+	char x[] = {" ---+--+1234ab567"};
+	char f[] = {"-+2147483640"};
+	
+	i = ft_atoi(f);
+	ft_putnbr(i);
+
+	return (0);
 }
 

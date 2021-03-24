@@ -6,7 +6,7 @@
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 12:20:20 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/23 11:56:34 by pcoenegr         ###   ########.fr       */
+/*   Updated: 2021/03/24 10:53:08 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,13 @@ int		ft_atoi(char *str)
 	while (ft_space(str[x]))
 		x++;
 	if (str[x] == '-')
-	{
 		neg = 1;
-	}
 	while ((str[x] == '-') || (str[x] == '+'))
 		x++;
 	while (str[x] >= '0' && str[x] <= '9')
 	{
 		tot *= 10;
-		tot += (str[x] - '0');
+		tot += ((int)str[x] - '0');
 		x++;
 	}
 	if (neg == 1)

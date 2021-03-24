@@ -16,10 +16,10 @@ void 	ft_putstr(char *str)
 }
 
 
-char	*ft_strlcat(char *dest, char *src, int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 		int	i;
-		int	l;
+		unsigned int	l;
 
 		i = 0;
 		l = 0;
@@ -32,13 +32,13 @@ char	*ft_strlcat(char *dest, char *src, int size)
 				i++;
 		}
 		dest[l] = '\0';
-		return (dest);
+		return (size);
 }
 
 int  	main(void)
 {
-	char 	r[] = {"Fuck This\n"};
-	char 	t[] = {"Code?\n"};
+	char 	r[] = {"This"};
+	char 	t[] = {"Fuck"};
 
 	ft_strlcat (t, r, 20);
 	ft_putstr (t);

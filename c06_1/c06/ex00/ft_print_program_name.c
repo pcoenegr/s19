@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_boolean.h                                       :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcoenegr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/22 14:29:16 by pcoenegr          #+#    #+#             */
-/*   Updated: 2021/03/23 14:58:36 by pcoenegr         ###   ########.fr       */
+/*   Created: 2021/03/22 09:29:33 by pcoenegr          #+#    #+#             */
+/*   Updated: 2021/03/22 09:31:09 by pcoenegr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_BOOLEAN_H
-# define FT_BOOLEAN_H
+#include <unistd.h>
 
-# include <unistd.h>
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
-# define TRUE		1
-# define FALSE		0
-# define SUCCESS	0
-# define EVEN_MSG	"I have an even number of arguments.\n"
-# define ODD_MSG	"I have an odd number of arguments.\n"
-# define EVEN(x)   ((nbr % 2 == 0)? TRUE : FALSE)
+void	ft_putstr(char *str)
+{
+	int	i;
 
-typedef int		t_bool;
-void			ft_putstr(char *str);
-t_bool			ft_is_even(int nbr);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+}
 
-#endif
+int		main(int argc, char *argv[])
+{
+	if (argc)
+		ft_putstr(argv[0]);
+	ft_putchar('\n');
+	return (0);
+}

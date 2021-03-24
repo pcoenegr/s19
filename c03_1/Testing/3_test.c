@@ -1,5 +1,5 @@
 #include <unistd.h>
-
+#include <stdio.h>
 void 	ft_putchar(char c)	
 {
 	write(1 , & c, 1);
@@ -15,10 +15,10 @@ void 	ft_putstr(char *str)
 	write ( 1, str, i);
 }
 
-char 	*ft_strncat(char *dest, char *src, int nb)
+char 	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int 	i;
-	int 	l;
+	unsigned int 	i;
+	unsigned int 	l;
 
 	i = 0;
 	l = 0;
@@ -36,10 +36,9 @@ char 	*ft_strncat(char *dest, char *src, int nb)
 
 int  	main(void)
 {
-	char 	r[] = {"Fuck This\n"};
-	char 	t[20] = {"Code?\n"};
+	char 	r[] = {"5+65+6a+65cas+cas+5cas+5cas+5cas"};
+	char 	t[4] = {"sc?"};
 
-	ft_strncat (t, r, 10);
-	ft_putstr (t);
+    printf("%s", ft_strncat (t, r, 5) );
 	return (0);
 }
