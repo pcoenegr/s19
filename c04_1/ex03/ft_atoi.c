@@ -32,7 +32,7 @@ int		ft_atoi(char *str)
 	while (ft_space(str[x]))
 		x++;
 	if (str[x] == '-')
-		neg = 1;
+        i++;
 	while ((str[x] == '-') || (str[x] == '+'))
 		x++;
 	while (str[x] >= '0' && str[x] <= '9')

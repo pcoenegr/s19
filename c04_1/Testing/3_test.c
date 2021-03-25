@@ -45,9 +45,7 @@ int		ft_atoi(char *str)
 	while (ft_space(str[x]))
 		x++;
 	if (str[x] == '-')
-	{
-		neg = 1;
-	}
+        neg--;
 	while ((str[x] == '-') || (str[x] == '+'))
 		x++;
 	while (str[x] >= '0' && str[x] <= '9')
@@ -66,7 +64,7 @@ int	main(void)
 {
 	int	i;
 	char x[] = {" ---+--+1234ab567"};
-	char f[] = {"-+2147483640"};
+	char f[] = {"--+2147483640"};
 	
 	i = ft_atoi(f);
 	ft_putnbr(i);

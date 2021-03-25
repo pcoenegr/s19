@@ -29,25 +29,23 @@ int			ft_strlen(char *str)
 	return (i);
 }
 
-char		*ft_strcat(char *str1, char *str2)
+char	*ft_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	int	i;
+	int	dest_size;
 
 	i = 0;
-	while (str1[i] != '\0')
+	dest_size = 0;
+	while (dest[dest_size])
+		dest_size++;
+	while (src[i])
 	{
+		dest[dest_size] = src[i];
+		dest_size++;
 		i++;
 	}
-	j = 0;
-	while (str2[j] != '\0')
-	{
-		str1[i] = str2[j];
-		i++;
-		j++;
-	}
-	str1[i] = '\0';
-	return (str1);
+	dest[dest_size] = '\0';
+	return (dest);
 }
 
 int			ft_strcpy(int size, char **strs, char *sep)
@@ -98,7 +96,7 @@ int      main ( int argc, char ** argv)
 
 	if (argc> 2 )
 	{
-		str = ft_strjoin (argc - 1 , argv + 1 , " .:. " ); 
+		str = ft_strjoin (argc - 1 , argv + 1 , " ## " ); 
 
 
 		ft_putstr (str); 

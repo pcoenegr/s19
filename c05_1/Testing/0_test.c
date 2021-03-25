@@ -27,8 +27,10 @@ int        ft_iterative_factorial(int nb)
     int i;
     
     i = 1;
-    if (nb <= 0)
+    if (nb < 0)
         return (0);
+	if (nb == 0)
+		return (1);
     while (nb > 0)
     {
         i *= nb;
@@ -41,7 +43,7 @@ int	main(void)
 {
 	int r;
 
-	r = ft_iterative_factorial(-4);
+	r = ft_iterative_factorial(0);
 
 	ft_putnbr(r);
 

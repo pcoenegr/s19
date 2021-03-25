@@ -28,7 +28,7 @@ int	ft_sqrt(int nb)
 	i = 0;
 	while (i * i < nb)
 		i++;
-	if (i * i == nb)
+	if ((i * i) == nb && nb % i == 0)
 		return (i);
 	else
 		return (0);
@@ -39,7 +39,7 @@ int 	main(void)
 {
 	int r;
 
-	r = ft_sqrt(1024);
+	r = ft_sqrt(25);
 
 	ft_putnbr(r);
 
